@@ -41,7 +41,7 @@ const createTextNode = ({
       }" ${labelOffset} y="12.5">${label}:</text>
       <text
         class="stat ${bold ? " bold" : "not_bold"}"
-        x="${(showIcons ? 140 : 120) + shiftValuePos}"
+        x="${(showIcons ? 140 : 120) + 80}"
         y="12.5"
         data-testid="${id}"
       >${kValue}</text>
@@ -79,7 +79,7 @@ const renderStatsCard = (stats = {}, options = { hide: [] }) => {
     text_bold = true,
     bg_color,
     theme = "dark",
-    custom_title = "My Github Stats",
+    custom_title = "Soham52's GitHub Stats",
     border_radius,
     border_color,
     locale,
@@ -203,7 +203,7 @@ const renderStatsCard = (stats = {}, options = { hide: [] }) => {
   const iconWidth = show_icons ? 16 : 0;
   const minCardWidth = hide_rank
     ? clampValue(50 /* padding */ + calculateTextWidth() * 2, 270, Infinity)
-    : 340 + iconWidth;
+    : 40 + iconWidth;
   const defaultCardWidth = hide_rank ? 270 : 495;
   let width = isNaN(card_width) ? defaultCardWidth : card_width;
   if (width < minCardWidth) {
@@ -255,8 +255,8 @@ const renderStatsCard = (stats = {}, options = { hide: [] }) => {
           transform="translate(${calculateRankXTranslation()}, ${
         height / 2 - 50
       })">
-        <circle class="rank-circle-rim" cx="-10" cy="8" r="40" />
-        <circle class="rank-circle" cx="-10" cy="8" r="40" />
+        <circle class="rank-circle-rim" cx="-10" cy="8" r="60" />
+        <circle class="rank-circle" cx="-10" cy="8" r="60" />
         <g class="rank-text">
           <text
             x="-5"

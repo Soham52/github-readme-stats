@@ -164,8 +164,13 @@ class Card {
         <title id="titleId">${this.a11yTitle}</title>
         <desc id="descId">${this.a11yDesc}</desc>
         <style>
+          @font-face {
+          font-family: 'VT323';
+          src: url('src/common/VT323-Regular.ttf') format('truetype');
+          }
           .header {
-            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+            font: 600 24px 'VT323', monospace;
+            letter-spacing: 0.05rem;
             fill: ${this.colors.titleColor};
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }

@@ -3,7 +3,7 @@
  * @param {number} value
  */
 const calculateCircleProgress = (value) => {
-  const radius = 40;
+  const radius = 180;
   const c = Math.PI * (radius * 2);
 
   if (value < 0) value = 0;
@@ -74,7 +74,8 @@ const getStyles = ({
     src: url('src/common/VT323-Regular.ttf') format('truetype');
     }
     .stat {
-      font: 600 14px 'VT323', monospace; fill: ${textColor};
+      font: 600 18px 'VT323', monospace; fill: ${textColor};
+      letter-spacing: 0.01rem;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -85,7 +86,7 @@ const getStyles = ({
       animation: fadeInAnimation 0.3s ease-in-out forwards;
     }
     .rank-text {
-      font: 800 24px 'VT323', monospace; fill: ${textColor};
+      font: 800 50px 'VT323', monospace; fill: ${textColor};
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }
     
@@ -104,9 +105,9 @@ const getStyles = ({
     }
     .rank-circle {
       stroke: ${titleColor};
-      stroke-dasharray: 250;
+      stroke-dasharray: 280;
       fill: none;
-      stroke-width: 6;
+      stroke-width: 8;
       stroke-linecap: round;
       opacity: 0.8;
       transform-origin: -10px 8px;
