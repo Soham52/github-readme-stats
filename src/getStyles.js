@@ -69,8 +69,12 @@ const getStyles = ({
   progress,
 }) => {
   return `
+    @font-face {
+    font-family: 'VT323';
+    src: url('src/common/VT323-Regular.ttf') format('truetype');
+    }
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
+      font: 600 14px 'VT323', monospace; fill: ${textColor};
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -81,7 +85,7 @@ const getStyles = ({
       animation: fadeInAnimation 0.3s ease-in-out forwards;
     }
     .rank-text {
-      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${textColor};
+      font: 800 24px 'VT323', monospace; fill: ${textColor};
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }
     

@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 import { Card } from "../common/Card.js";
 import { I18n } from "../common/I18n.js";
 import { icons } from "../common/icons.js";
@@ -66,20 +66,20 @@ const renderStatsCard = (stats = {}, options = { hide: [] }) => {
   } = stats;
   const {
     hide = [],
-    show_icons = false,
+    show_icons = true,
     hide_title = false,
-    hide_border = false,
+    hide_border = true,
     card_width,
     hide_rank = false,
-    include_all_commits = false,
-    line_height = 25,
+    include_all_commits = true,
+    line_height = 30,
     title_color,
-    icon_color,
+    icon_color = "FFFFFF",
     text_color,
     text_bold = true,
     bg_color,
-    theme = "default",
-    custom_title,
+    theme = "dark",
+    custom_title = "My Github Stats",
     border_radius,
     border_color,
     locale,
