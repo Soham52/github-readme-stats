@@ -77,6 +77,25 @@ const getStyles = ({
       font: 600 18px 'VT323', monospace; fill: ${textColor};
       letter-spacing: 0.01rem;
     }
+
+    ::-moz-selection {
+    background: transparent;
+    color: #fff;
+    text-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.35);
+    }
+
+    ::selection {
+    background: transparent;
+    color: #fff;
+    text-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.35);
+    }
+
+    ::-webkit-selection {
+    background: transparent;
+    color: #fff;
+    text-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.35);
+    }
+
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
       .stat { font-size:12px; }
